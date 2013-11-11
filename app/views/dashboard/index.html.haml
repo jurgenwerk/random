@@ -1,0 +1,10 @@
+%h1 Awesome stuff here
+
+- if signed_in?
+  %h2 
+    Welcome, 
+    = current_user.name
+    %br
+    = link_to "Sign out", signout_path, method: "delete" 
+- else
+  = link_to "Sign in", signin_path

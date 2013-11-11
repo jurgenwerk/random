@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  has_driver_license: false
+
+two:
+  email: MyString
+  has_driver_license: false
