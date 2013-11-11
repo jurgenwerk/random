@@ -1,0 +1,39 @@
+.container
+  .navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to "The App", root_path, class: "navbar-brand"
+      .navbar-collapse.collapse
+        - if signed_in?
+          %ul.nav.navbar-nav
+            %li.active
+              %a{href: "#"} Link
+            %li
+              %a{href: "#"} Link
+            %li
+              %a{href: "#"} Link
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{href: "./"} Something
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                You
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: "#"} Profile
+                %li
+                  = link_to "Sign out", signout_path, method: "delete" 
+        - else
+          %ul.nav.navbar-nav
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to "Sign up", signup_path
+            %li
+              = link_to "Login", signin_path
+            

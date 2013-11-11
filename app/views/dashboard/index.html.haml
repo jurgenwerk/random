@@ -1,10 +1,9 @@
-%h1 Awesome stuff here
+
 
 - if signed_in?
+  %h1 Awesome stuff here
   %h2 
     Welcome, 
     = current_user.name
-    %br
-    = link_to "Sign out", signout_path, method: "delete" 
 - else
-  = link_to "Sign in", signin_path
+  %h2 Please sign in.
